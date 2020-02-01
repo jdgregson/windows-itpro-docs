@@ -17,11 +17,11 @@ ms.collection: M365-security-compliance
 ms.topic: article
 ---
 
-# Microsoft Defender ATP Flow connector
+# Microsoft Power Automate (formerly Microsoft Flow), and Azure Functions
 
 **Applies to:** [Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP)](https://go.microsoft.com/fwlink/p/?linkid=2069559)
 
-- Want to experience Microsoft Defender ATP? [Sign up for a free trial.](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-exposedapis-abovefoldlink) 
+- Want to experience Microsoft Defender ATP? [Sign up for a free trial.](https://www.microsoft.com/microsoft-365/windows/microsoft-defender-atp?ocid=docs-wdatp-exposedapis-abovefoldlink) 
 
 Automating security procedures is a standard requirement for every modern Security Operations Center. The lack of professional Cyber defenders, forces SOC to work in the most efficient way and automation is a must. MS flow supports different connectors that were built exactly for that. You can build an end-to-end procedure automation within few minutes.
 

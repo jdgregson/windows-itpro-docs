@@ -1,7 +1,7 @@
 ---
 title: Create an Application to access Microsoft Defender ATP without a user
 ms.reviewer: 
-description: Use the exposed data and actions using a set of programmatic APIs that are part of the Microsoft Intelligence Security Graph.
+description: Learn how to design a web app to get programmatic access to Microsoft Defender ATP without a user.
 keywords: apis, graph api, supported apis, actor, alerts, machine, user, domain, ip, file, advanced hunting, query
 search.product: eADQiWindows 10XVcnh
 ms.prod: w10
@@ -21,7 +21,7 @@ ms.topic: article
 
 **Applies to:** [Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP)](https://go.microsoft.com/fwlink/p/?linkid=2069559)
 
-- Want to experience Microsoft Defender ATP? [Sign up for a free trial.](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-exposedapis-abovefoldlink)
+- Want to experience Microsoft Defender ATP? [Sign up for a free trial.](https://www.microsoft.com/microsoft-365/windows/microsoft-defender-atp?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 This page describes how to create an application to get programmatic access to Microsoft Defender ATP without a user.
 

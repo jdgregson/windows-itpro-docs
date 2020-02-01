@@ -22,7 +22,7 @@ ms.topic: article
 **Applies to:**
 - [Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP)](https://go.microsoft.com/fwlink/p/?linkid=2069559)
 
->Want to experience Microsoft Defender ATP? [Sign up for a free trial.](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-advancedfeats-abovefoldlink)
+>Want to experience Microsoft Defender ATP? [Sign up for a free trial.](https://www.microsoft.com/microsoft-365/windows/microsoft-defender-atp?ocid=docs-wdatp-advancedfeats-abovefoldlink)
 
 Depending on the Microsoft security products that you use, some advanced features might be available for you to integrate Microsoft Defender ATP with.
 
@@ -30,7 +30,7 @@ Use the following advanced features to get better protected from potentially mal
 
 ## Automated investigation
 
-When you enable this feature, you'll be able to take advantage of the automated investigation and remediation features of the service. For more information, see [Automated investigations](automated-investigations.md).
+When you enable this feature, you'll be able to take advantage of the automated investigation and remediation features of the service. For more information, see [Automated investigation](automated-investigations.md).
 
 ## Live response
 
@@ -44,7 +44,7 @@ Enabling this feature allows you to run unsigned scripts in a live response sess
 
 ## Auto-resolve remediated alerts
 
-For tenants created on or after Windows 10, version 1809 the automated investigations capability is configured by default to resolve alerts where the automated analysis result status is "No threats found" or "Remediated".  If you don’t want to have alerts auto-resolved, you’ll need to manually turn off the feature.
+For tenants created on or after Windows 10, version 1809 the automated investigation and remediation capability is configured by default to resolve alerts where the automated analysis result status is "No threats found" or "Remediated".  If you don’t want to have alerts auto-resolved, you’ll need to manually turn off the feature.
 
 >[!TIP]
 >For tenants created prior that version, you'll need to manually turn this feature on from the [Advanced features](https://securitycenter.windows.com/preferences2/integration) page.

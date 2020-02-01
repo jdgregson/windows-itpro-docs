@@ -1,20 +1,20 @@
 --- 
 title: Manage connections from Windows 10 operating system components to Microsoft services
-description: If you want to minimize connections from Windows to Microsoft services, or configure particular privacy settings, this article covers the settings that you could consider.
+description: Learn how to minimize connections from Windows to Microsoft services, and configure particular privacy settings related to these connections.
 ms.assetid: ACCEB0DD-BC6F-41B1-B359-140B242183D9
 ms.reviewer: 
 keywords: privacy, manage connections to Microsoft, Windows 10, Windows Server 2016
 ms.prod: w10
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.localizationpriority: medium
+ms.localizationpriority: high
 audience: ITPro
-author: dansimp
-ms.author: dansimp
-manager: dansimp
+author: medgarmedgar
+ms.author: v-medgar
+manager: sanashar
 ms.collection: M365-security-compliance
 ms.topic: article
-ms.date: 8/23/2019
+ms.date: 9/17/2019
 ---
 
 # Manage connections from Windows 10 operating system components to Microsoft services
@@ -271,7 +271,6 @@ Find the Cortana Group Policy objects under **Computer Configuration** &gt; **Ad
 | Allow search and Cortana to use location             | Choose whether Cortana and Search can provide location-aware search results.<br/><br/>**Disable** this policy to block access to location information for Cortana. |
 | Do not allow web search                              | Choose whether to search the web from Windows Desktop Search.<br/><br/>**Enable** this policy to remove the option to search the Internet from Cortana. |
 | Don't search the web or display web results in Search| Choose whether to search the web from Cortana.<br/><br/>**Enable** this policy to stop web queries and results from showing in Search. |
-| Set what information is shared in Search             | Control what information is shared with Bing in Search.<br/><br/>If you **enable** this policy and set it to **Anonymous info**, usage information will be shared but not search history, Microsoft Account information, or specific location. |
 
 You can also apply the Group Policies using the following registry keys:
 
@@ -281,7 +280,7 @@ You can also apply the Group Policies using the following registry keys:
 | Allow search and Cortana to use location             | HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search<br/>REG_DWORD: AllowSearchToUseLocation <br/>Value: 0 |
 | Do not allow web search                              | HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search<br/>REG_DWORD: DisableWebSearch <br/>Value: 1 |
 | Don't search the web or display web results in Search| HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search<br/>REG_DWORD: ConnectedSearchUseWeb <br/>Value: 0 |
-| Set what information is shared in Search             | HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search<br/>REG_DWORD: ConnectedSearchPrivacy <br/>Value: 3 |
+
 
 >[!IMPORTANT]
 > Using the Group Policy editor these steps are required for all supported versions of Windows 10, however they are not required for devices running Windows 10, version 1607 or Windows Server 2016.
@@ -418,7 +417,7 @@ To turn off Insider Preview builds for Windows 10:
 | Allow Microsoft services to provide enhanced suggestions as the user types in the Address Bar | Choose whether an employee can configure enhanced suggestions, which are presented to the employee as they type in the Address Bar. <br /> **Set Value to: Disabled**|
 | Turn off the auto-complete feature for web addresses | Choose whether auto-complete suggests possible matches when employees are typing web address in the Address Bar. <br /> **Set Value to: Enabled** </br> You can also turn this off in the UI by clearing the <strong>Internet Options</strong> &gt; **Advanced** &gt; **Use inline AutoComplete in the Internet Explorer Address Bar and Open Dialog** check box.|
 | Turn off browser geolocation | Choose whether websites can request location data from Internet Explorer. <br /> **Set Value to: Enabled**|
-| Prevent managing SmartScreen filter | Choose whether employees can manage the SmartScreen Filter in Internet Explorer. <br /> **Set Value to: Enabled** and then set **Select SmartScreen filtering mode** to **Off**.|
+| Prevent managing Windows Defender SmartScreen | Choose whether employees can manage the Windows Defender SmartScreen in Internet Explorer. <br /> **Set Value to: Enabled** and then set **Select Windows Defender SmartScreen mode** to **Off**.|
 
 
 | Registry Key                                         | Registry path                                                                                       |
@@ -427,7 +426,7 @@ To turn off Insider Preview builds for Windows 10:
 | Allow Microsoft services to provide enhanced suggestions as the user types in the Address Bar | HKLM\\SOFTWARE\\Policies\\Microsoft\\Internet Explorer<br />REG_DWORD: AllowServicePoweredQSA <br />**Set Value to: 0**|
 | Turn off the auto-complete feature for web addresses |HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\CurrentVersion\\Explorer\\AutoComplete<br/>REG_SZ: AutoSuggest <br />Set Value to: **no** |
 | Turn off browser geolocation | HKLM\\SOFTWARE\\Policies\\Microsoft\\Internet Explorer\\Geolocation<br/>REG_DWORD: PolicyDisableGeolocation <br />**Set Value to: 1** |
-| Prevent managing SmartScreen filter | HKLM\\SOFTWARE\\Policies\\Microsoft\\Internet Explorer\\PhishingFilter<br/>REG_DWORD: EnabledV9 <br />**Set Value to: 0** |
+| Prevent managing Windows Defender SmartScreen | HKLM\\SOFTWARE\\Policies\\Microsoft\\Internet Explorer\\PhishingFilter<br/>REG_DWORD: EnabledV9 <br />**Set Value to: 0** |
 
 There are more Group Policy objects that are used by Internet Explorer:
 
@@ -578,7 +577,7 @@ Alternatively, you can configure the following Registry keys as described:
 | Configure Do Not Track   | HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\MicrosoftEdge\\Main<br/>REG_DWORD name: DoNotTrack<br/> REG_DWORD: **1** |
 | Configure Password Manager | HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\MicrosoftEdge\\Main<br/>REG_SZ name: FormSuggest Passwords<br /> REG_SZ: **No** |
 | Configure search suggestions in Address Bar | HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\MicrosoftEdge\\SearchScopes<br/>REG_DWORD name: ShowSearchSuggestionsGlobal <br />Value: **0**|
-| Configure Windows Defender SmartScreen Filter (Windows 10, version 1703) | HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\MicrosoftEdge\\PhishingFilter<br/>REG_DWORD name: EnabledV9 <br/>Value: **0** |
+| Configure Windows Defender SmartScreen (Windows 10, version 1703) | HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\MicrosoftEdge\\PhishingFilter<br/>REG_DWORD name: EnabledV9 <br/>Value: **0** |
 | Allow web content on New Tab page  | HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\MicrosoftEdge\\ServiceUI<br/>REG_DWORD name: AllowWebContentOnNewTabPage <br/>Value: **0** |
 | Configure corporate Home pages | HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\MicrosoftEdge\\Internet Settings<br/>REG_SZ name: ProvisionedHomePages <br/>Value: **<<about:blank>>**|
 | Prevent the First Run webpage from opening on Microsoft Edge | HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\MicrosoftEdge\\Main <br>REG_DWORD name: PreventFirstRunPage <br/>Value: **1**|
@@ -876,7 +875,7 @@ To turn off **Let apps use my advertising ID for experiences across apps (turnin
 
 - Create a REG_DWORD registry setting named **DisabledByGroupPolicy** in **HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\AdvertisingInfo** with a value of 1 (one).
 
-To turn off **Turn on SmartScreen Filter to check web content (URLs) that Microsoft Store apps use**:
+To turn off **Turn on Windows Defender SmartScreen to check web content (URLs) that Microsoft Store apps use**:
 
 - Turn off the feature in the UI.
 
@@ -1414,7 +1413,11 @@ To turn off Inking & Typing data collection (note: there is no Group Policy for 
 
   -or-
 
-- Set **RestrictImplicitTextCollection** registry REG_DWORD setting in **HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\InputPersonalization** to a **value of 1 (one)**
+- Set **RestrictImplicitTextCollection** registry REG_DWORD setting in **HKEY_CURRENT_USER\Software\Microsoft\InputPersonalization** to a **value of 1 (one)**
+
+  -and-
+ 
+- Set **RestrictImplicitInkCollection** registry REG_DWORD setting in **HKEY_CURRENT_USER\Software\Microsoft\InputPersonalization** to a **value of 1 (one)**
 
 
 ### <a href="" id="bkmk-act-history"></a>18.22 Activity History
@@ -1438,15 +1441,15 @@ To turn this Off in the UI:
 
 -OR-
  
-- Create a REG_DWORD registry setting named **EnableActivityFeed** in **HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\System** with a **value of 0 (zero)**
+- Create a REG_DWORD registry setting named **EnableActivityFeed** in **HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\System** with a **value of 2 (two)**
 
      -and-
 
-- Create a REG_DWORD registry setting named **PublishUserActivities** in **HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\System** with a **value of 0 (zero)**
+- Create a REG_DWORD registry setting named **PublishUserActivities** in **HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\System** with a **value of 2 (two)**
 
      -and-
 
-- Create a REG_DWORD registry setting named **UploadUserActivities** in **HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\System** with a **value of 0 (zero)**
+- Create a REG_DWORD registry setting named **UploadUserActivities** in **HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\System** with a **value of 2 (two)**
     
 ### <a href="" id="bkmk-voice-act"></a>18.23 Voice Activation
 
@@ -1467,11 +1470,11 @@ To turn this Off in the UI:
 
 -OR-
  
-- Create a REG_DWORD registry setting named **LetAppsActivateWithVoice** in **HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\AppPrivacy** with a **value of 0 (zero)**
+- Create a REG_DWORD registry setting named **LetAppsActivateWithVoice** in **HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\AppPrivacy** with a **value of 2 (two)**
 
      -and-
 
-- Create a REG_DWORD registry setting named **PublishUserActivities** in **HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\AppPrivacy** with a **value of 0 (zero)**
+- Create a REG_DWORD registry setting named **LetAppsActivateWithVoiceAboveLock** in **HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\AppPrivacy** with a **value of 2 (two)**
 
 
 

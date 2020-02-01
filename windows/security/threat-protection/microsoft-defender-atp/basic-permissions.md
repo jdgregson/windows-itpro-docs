@@ -1,6 +1,6 @@
 ---
 title: Use basic permissions to access Microsoft Defender Security Center
-description: Assign read and write or read only access to the Microsoft Defender Advanced Threat Protection portal.
+description: Learn how to use basic permissions to access the Microsoft Defender Advanced Threat Protection portal.
 keywords: assign user roles, assign read and write access, assign read only access, user, user roles, roles
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
@@ -23,7 +23,7 @@ ms.topic: article
 - Azure Active Directory
 - [Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP)](https://go.microsoft.com/fwlink/p/?linkid=2069559)
 
->Want to experience Microsoft Defender ATP? [Sign up for a free trial.](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-basicaccess-abovefoldlink)
+>Want to experience Microsoft Defender ATP? [Sign up for a free trial.](https://www.microsoft.com/microsoft-365/windows/microsoft-defender-atp?ocid=docs-wdatp-basicaccess-abovefoldlink)
 
 Refer to the instructions below to use basic permissions management. 
 

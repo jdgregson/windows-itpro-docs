@@ -1,6 +1,6 @@
 ---
 title: WannaCrypt ransomware worm targets out-of-date systems
-description: In this blog, we provide an early analysis of the end-to-end ransomware attack. Please note this threat is still under investigation. The attack is still active, and there is a possibility that the attacker will attempt to react to our detection response.
+description: This is an early analysis of the WannaCrypt ransomware attack. Microsoft antimalware diagnostic data immediately picked up signs of this campaign in May 2017.
 keywords: wannacry, wannacrypt, wanna, ransomware
 search.product: eADQiWindows 10XVcnh
 ms.pagetype: security
@@ -12,7 +12,7 @@ author: dulcemontemayor
 ms.date: 07/27/2017
 ms.reviewer: 
 manager: dansimp
-ms.author: dolmont
+ms.author: dansimp
 ---
 
 # WannaCrypt ransomware worm targets out-of-date systems
@@ -195,7 +195,7 @@ For enterprises, use [Device Guard](https://technet.microsoft.com/itpro/windows/
 
 Use [Office 365 Advanced Threat Protection](https://blogs.office.com/2015/04/08/introducing-exchange-online-advanced-threat-protection/), which has machine learning capability that blocks dangerous email threats, such as the emails carrying ransomware.
 
-Monitor networks with [Windows Defender Advanced Threat Protection](https://www.microsoft.com/WindowsForBusiness/windows-atp), which alerts security operations teams about suspicious activities. Download this playbook to see how you can leverage Windows Defender ATP to detect, investigate, and mitigate ransomware in networks: [Windows Defender Advanced Threat Protection - Ransomware response playbook](https://www.microsoft.com/download/details.aspx?id=55090).
+Monitor networks with [Windows Defender Advanced Threat Protection](https://www.microsoft.com/microsoft-365/windows/microsoft-defender-atp), which alerts security operations teams about suspicious activities. Download this playbook to see how you can leverage Windows Defender ATP to detect, investigate, and mitigate ransomware in networks: [Windows Defender Advanced Threat Protection - Ransomware response playbook](https://www.microsoft.com/download/details.aspx?id=55090).
 
 ## Resources
 

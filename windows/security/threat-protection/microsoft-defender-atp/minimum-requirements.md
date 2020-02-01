@@ -24,7 +24,7 @@ ms.topic: conceptual
 
 There are some minimum requirements for onboarding machines to the service. Learn about the licensing, hardware and software requirements, and other configuration settings to onboard devices to the service.
 
->Want to experience Microsoft Defender ATP? [Sign up for a free trial.](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-minreqs-abovefoldlink)
+>Want to experience Microsoft Defender ATP? [Sign up for a free trial.](https://www.microsoft.com/microsoft-365/windows/microsoft-defender-atp?ocid=docs-wdatp-minreqs-abovefoldlink)
 
 
 >[!TIP]
@@ -35,8 +35,10 @@ There are some minimum requirements for onboarding machines to the service. Lear
 Microsoft Defender Advanced Threat Protection requires one of the following Microsoft Volume Licensing offers:
 
 - Windows 10 Enterprise E5
-- Windows 10 Education E5
+- Windows 10 Education A5
 - Microsoft 365 E5 (M365 E5) which includes Windows 10 Enterprise E5
+- Microsoft 365 A5 (M365 A5)
+
 
 For more information on the array of features in Windows 10 editions, see [Compare Windows 10 editions](https://www.microsoft.com/windowsforbusiness/compare).
 
@@ -99,6 +101,10 @@ When you run the onboarding wizard for the first time, you must choose where you
 
 
 ### Diagnostic data settings
+
+> [!NOTE]
+> Microsoft Defender ATP doesn't require any specific diagnostic level as long as it's enabled.
+
 You must ensure that the diagnostic data service is enabled on all the machines in your organization.
 By default, this service is enabled, but it&#39;s good practice to check to ensure that you&#39;ll get sensor data from them.
 
@@ -116,9 +122,9 @@ By default, this service is enabled, but it&#39;s good practice to check to ensu
    sc qc diagtrack
    ```
 
-If the service is enabled, then the result should look like the following screenshot:
+    If the service is enabled, then the result should look like the following screenshot:
 
-![Result of the sc query command for diagtrack](images/windefatp-sc-qc-diagtrack.png)
+    ![Result of the sc query command for diagtrack](images/windefatp-sc-qc-diagtrack.png)
 
 If the **START_TYPE** is not set to **AUTO_START**, then you'll need to set the service to automatically start.
 
@@ -167,6 +173,9 @@ You must configure Security intelligence updates on the Microsoft Defender ATP m
 When Windows Defender Antivirus is not the active antimalware in your organization and you use the Microsoft Defender ATP service, Windows Defender Antivirus goes on passive mode. If your organization has disabled Windows Defender Antivirus through group policy or other methods, machines that are onboarded to Microsoft Defender ATP must be excluded from this group policy.
 
 If you are onboarding servers and Windows Defender Antivirus is not the active antimalware on your servers, you shouldn't uninstall Windows Defender Antivirus. You'll need to configure it to run on passive mode. For more information, see [Onboard servers](configure-server-endpoints.md).
+
+> [!NOTE]
+> Your regular group policy doesn’t apply to Tamper Protection, and changes to Windows Defender Antivirus settings will be ignored when Tamper Protection is on.
 
 
 For more information, see [Windows Defender Antivirus compatibility](../windows-defender-antivirus/windows-defender-antivirus-compatibility.md).

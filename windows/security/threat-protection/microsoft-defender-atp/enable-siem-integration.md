@@ -23,7 +23,7 @@ ms.topic: article
 - [Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP)](https://go.microsoft.com/fwlink/p/?linkid=2069559)
 
 
->Want to experience Microsoft Defender ATP? [Sign up for a free trial.](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-enablesiem-abovefoldlink) 
+>Want to experience Microsoft Defender ATP? [Sign up for a free trial.](https://www.microsoft.com/microsoft-365/windows/microsoft-defender-atp?ocid=docs-wdatp-enablesiem-abovefoldlink) 
 
 Enable security information and event management (SIEM) integration so you can pull detections from Microsoft Defender Security Center using your SIEM solution or by connecting directly to the detections REST API.
 
@@ -47,7 +47,7 @@ Enable security information and event management (SIEM) integration so you can p
 
     > [!WARNING]
     >The client secret is only displayed once. Make sure you keep a copy of it in a safe place.<br>
-     For more information about getting a new secret see, [Learn how to get a new secret](troubleshoot-custom-ti.md#learn-how-to-get-a-new-client-secret).
+     
 
     ![Image of SIEM integration from Settings menu](images/siem_details.png)
 

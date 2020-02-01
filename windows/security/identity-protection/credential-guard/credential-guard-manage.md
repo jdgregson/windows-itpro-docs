@@ -1,6 +1,6 @@
 ---
 title: Manage Windows Defender Credential Guard (Windows 10)
-description: Deploying and managing Windows Defender Credential Guard using Group Policy, the registry, or the Windows Defender Device Guard and Windows Defender Credential Guard hardware readiness tool.
+description: Learn how to deploy and manage Windows Defender Credential Guard using Group Policy, the registry, or hardware readiness tools.
 ms.prod: w10
 ms.mktglfcycl: explore
 ms.sitesec: library
@@ -8,7 +8,7 @@ ms.pagetype: security
 ms.localizationpriority: medium
 audience: ITPro
 author: dulcemontemayor
-ms.author: dolmont
+ms.author: dansimp
 manager: dansimp
 ms.collection: M365-identity-device-management
 ms.topic: article
@@ -86,6 +86,8 @@ You can do this by using either the Control Panel or the Deployment Image Servic
     ```
     dism /image:<WIM file name> /Enable-Feature /FeatureName:IsolatedUserMode
     ```
+> [!NOTE]
+> In Windows 10, version 1607 and later, the Isolated User Mode feature has been integrated into the core operating system. Running the command in step 3 above is therefore no longer required.
 
 > [!NOTE]
 > You can also add these features to an online image by using either DISM or Configuration Manager.
@@ -110,10 +112,10 @@ You can do this by using either the Control Panel or the Deployment Image Servic
 
 ### Enable Windows Defender Credential Guard by using the Windows Defender Device Guard and Windows Defender Credential Guard hardware readiness tool
 
-You can also enable Windows Defender Credential Guard by using the [Windows Defender Device Guard and Windows Defender Credential Guard hardware readiness tool](https://www.microsoft.com/download/details.aspx?id=53337).
+You can also enable Windows Defender Credential Guard by using the [Windows Defender Device Guard and Windows Defender Credential Guard hardware readiness tool](dg_readiness_tool.md).
 
 ```
-DG_Readiness_Tool_v3.6.ps1 -Enable -AutoReboot
+DG_Readiness_Tool.ps1 -Enable -AutoReboot
 ```
 > [!IMPORTANT]
 > When running the Windows Defender Device Guard and Windows Defender Credential Guard hardware readiness tool on a non-English operating system, within the script, change `$OSArch = $(gwmi win32_operatingsystem).OSArchitecture` to be `$OSArch = $((gwmi win32_operatingsystem).OSArchitecture).tolower()` instead, in order for the tool to work. 

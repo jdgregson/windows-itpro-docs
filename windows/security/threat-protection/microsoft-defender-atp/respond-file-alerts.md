@@ -23,9 +23,9 @@ ms.topic: article
 
 - [Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP)](https://go.microsoft.com/fwlink/p/?linkid=2069559)
  
-[!include[Prerelease information](prerelease.md)]
+[!include[Prerelease information](../../includes/prerelease.md)]
 
->Want to experience Microsoft Defender ATP? [Sign up for a free trial.](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-responddile-abovefoldlink)
+>Want to experience Microsoft Defender ATP? [Sign up for a free trial.](https://www.microsoft.com/microsoft-365/windows/microsoft-defender-atp?ocid=docs-wdatp-responddile-abovefoldlink)
 
 Quickly respond to detected attacks by stopping and quarantining files or blocking a file. After taking action on files, you can check activity details in the Action center.
 
@@ -36,6 +36,7 @@ Response actions run along the top of the file page, and include:
 - Stop and Quarantine File
 - Add Indicator
 - Download file
+- Consult a threat expert
 - Action center
 
 You can also submit files for deep analysis, to run the file in a secure cloud sandbox. When the analysis is complete, you'll get a detailed report that provides information about the behavior of the file. You can submit files for deep analysis and read past reports by selecting the **Deep analysis** tab. It's located below the file information cards.
@@ -76,6 +77,10 @@ This action takes effect on machines with Windows 10, version 1703 or later, whe
 
     - **Alerts** - click the corresponding links from the Description or Details in the Artifact timeline
     - **Search box** - select **File** from the drop–down menu and enter the file name
+
+
+    >[!NOTE]
+    >The stop and quarantine file action is limited to a maximum of 1000 machines. To stop a file on a larger number of machines, see [Add indicator to block or allow file](#add-indicator-to-block-or-allow-a-file).
 
 2. Go to the top bar and select **Stop and Quarantine File**.
 
@@ -168,6 +173,12 @@ When you select this action, a fly-out will appear. From the fly-out, you can re
 ![Image of download file fly-out](images/atp-download-file.png)
 
 If a file is not already stored by Microsoft Defender ATP, you cannot download it. Instead, you will see a **Collect file** button in the same location. If a file has not been seen in the organization in the past 30 days, **Collect file** will be disabled.
+
+## Consult a threat expert
+
+You can consult a Microsoft threat expert for more insights regarding a potentially compromised machine or already compromised ones. Microsoft Threat Experts can be engaged directly from within the Microsoft Defender Security Center for timely and accurate response. Experts provide insights not just regarding a potentially compromised machine, but also to better understand complex threats, targeted attack notifications that you get, or if you need more information about the alerts, or a threat intelligence context that you see on your portal dashboard.
+
+See [Consult a Microsoft Threat Expert](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-microsoft-threat-experts#consult-a-microsoft-threat-expert-about-suspicious-cybersecurity-activities-in-your-organization) for details.
 
 ## Check activity details in Action center
 

@@ -1,6 +1,6 @@
 ---
 title: Windows Autopilot for existing devices
-description: Windows Autopilot deployment
+description: Modern desktop deployment with Windows Autopilot enables you to easily deploy the latest version of Windows 10 to your existing devices.
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
 ms.reviewer: mniehaus
 manager: laurawi
@@ -9,7 +9,8 @@ ms.mktglfcycl: deploy
 ms.localizationpriority: medium
 ms.sitesec: library
 ms.pagetype: deploy
-audience: itproauthor: greg-lindsay
+audience: itpro
+author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
@@ -34,6 +35,7 @@ This topic describes how to convert Windows 7 or Windows 8.1 domain-joined compu
 - Assigned Microsoft Intune Licenses
 - Azure Active Directory Premium
 - Windows 10 version 1809 or later imported into Config Mgr as an Operating System Image
+  - **Important**: See [Known issues](known-issues.md) if you are using Windows 10 1903 with Configuration Manager’s built-in **Windows Autopilot existing device** task sequence template. Currently, one of the steps in this task sequence must be edited to work properly with Windows 10, version 1903.
 
 ## Procedures
 
@@ -66,15 +68,16 @@ See the following examples.
     Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
     Install-Module AzureAD -Force
     Install-Module WindowsAutopilotIntune -Force
+    Install-Module Microsoft.Graph.Intune -Force
     ```
-
+    
 3. Enter the following lines and provide Intune administrative credentials
-   - In the following command, replace the example user principal name for Azure authentication (admin@M365x373186.onmicrosoft.com) with your user account. Be sure that the user account you specify has sufficient administrative rights.
+   - Be sure that the user account you specify has sufficient administrative rights.
 
      ```powershell
-     Connect-AutopilotIntune -user admin@M365x373186.onmicrosoft.com
+     Connect-MSGraph
      ```
-     The password for your account will be requested using a standard Azure AD form. Type your password and then click **Sign in**. 
+     The user and password for your account will be requested using a standard Azure AD form. Type your username and password and then click **Sign in**. 
      <br>See the following example:
 
      ![Azure AD authentication](images/pwd.png)
@@ -196,7 +199,7 @@ See the following examples.
    - Click **Next**, and then on the Install Windows page click **Browse** and select a Windows 10 **Image package** and **Image Index**, version 1803 or later.
    - Select the **Partition and format the target computer before installing the operating system** checkbox.
    - Select or clear **Configure task sequence for use with Bitlocker** checkbox. This is optional.
-   - <u>Product Key</u> and <u>Server licensing mode</u>: Optionally enter a product key and server licencing mode.
+   - <u>Product Key</u> and <u>Server licensing mode</u>: Optionally enter a product key and server licensing mode.
    - <u>Randomly generate the local administrator password and disable the account on all support platforms (recommended)</u>: Optional.
    - <u>Enable the account and specify the local administrator password</u>: Optional.
    - Click **Next**, and then on the Configure Network page choose **Join a workgroup** and specify a name (ex: workgroup) next to **Workgroup**.

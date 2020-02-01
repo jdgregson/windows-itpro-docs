@@ -22,8 +22,6 @@ ms.topic: article
 **Applies to:**
 - [Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP)](https://go.microsoft.com/fwlink/p/?linkid=2069559)
 
-[!include[Prerelease information](prerelease.md)]
-
 
 Live response is a capability that gives you instantaneous access to a machine using a remote shell connection. This gives you the power to do in-depth investigative work and take immediate response actions to promptly contain identified threats – real-time. 
 
@@ -56,6 +54,9 @@ You'll need to enable the live response capability in the [Advanced features set
     
 - **Ensure that you have the appropriate permissions**<br>
 	Only users who have been provisioned with the appropriate permissions can initiate a session. For more information on role assignments see, [Create and manage roles](user-roles.md). 
+
+    > [!IMPORTANT]
+    > The option to upload a file to the library is only available to those with the appropriate RBAC permissions. The button is greyed out for users with only delegated permissions.
 
     Depending on the role that's been granted to you, you can run basic or advanced live response commands. Users permission are controlled by RBAC custom role. 
 
@@ -244,7 +245,6 @@ Each command is tracked with full details such as:
 
 ## Related topic
 - [Live response command examples](live-response-command-examples.md)
-
 
 
 

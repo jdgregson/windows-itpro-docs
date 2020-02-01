@@ -1,7 +1,7 @@
 ---
-title: Hello World
+title: Hello World for Microsoft Defender Advanced Threat Protection API
 ms.reviewer: 
-description: Use this API to run advanced queries
+description: Create a practice 'Hello world'-style API call to the Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) API.
 keywords: apis, supported apis, advanced hunting, query
 search.product: eADQiWindows 10XVcnh
 ms.prod: w10
@@ -21,7 +21,7 @@ ms.topic: article
 
 **Applies to:** [Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP)](https://go.microsoft.com/fwlink/p/?linkid=2069559)
 
-- Want to experience Microsoft Defender ATP? [Sign up for a free trial.](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-exposedapis-abovefoldlink) 
+- Want to experience Microsoft Defender ATP? [Sign up for a free trial.](https://www.microsoft.com/microsoft-365/windows/microsoft-defender-atp?ocid=docs-wdatp-exposedapis-abovefoldlink) 
 
 
 ## Get Alerts using a simple PowerShell script

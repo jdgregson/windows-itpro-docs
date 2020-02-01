@@ -21,7 +21,7 @@ ms.topic: article
 
 **Applies to:** [Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP)](https://go.microsoft.com/fwlink/p/?linkid=2069559)
 
-- Want to experience Microsoft Defender ATP? [Sign up for a free trial.](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-exposedapis-abovefoldlink) 
+- Want to experience Microsoft Defender ATP? [Sign up for a free trial.](https://www.microsoft.com/microsoft-365/windows/microsoft-defender-atp?ocid=docs-wdatp-exposedapis-abovefoldlink) 
 
 In this section you will learn create a Power BI report on top of Microsoft Defender ATP APIs.
 
@@ -43,7 +43,7 @@ The first example demonstrates how to connect Power BI to Advanced Hunting API a
 
 ```
 	let 
-		AdvancedHuntingQuery = "MiscEvents | where ActionType contains 'Anti'",
+		AdvancedHuntingQuery = "DeviceEvents | where ActionType contains 'Anti'",
 
 		HuntingUrl = "https://api.securitycenter.windows.com/api/advancedqueries",
 
@@ -120,6 +120,12 @@ The first example demonstrates how to connect Power BI to Advanced Hunting API a
 - You can do the same for **Alerts** and **Machines**.
 
 - You also can use OData queries for queries filters, see [Using OData Queries](exposed-apis-odata-samples.md)
+
+
+## Power BI dashboard samples in GitHub
+For more information see the [Power BI report templates](https://github.com/microsoft/MDATP-PowerBI-Templates).
+
+
 
 ## Related topic
 - [Microsoft Defender ATP APIs](apis-intro.md)

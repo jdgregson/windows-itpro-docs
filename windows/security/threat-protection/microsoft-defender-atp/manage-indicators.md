@@ -23,7 +23,6 @@ ms.topic: article
 **Applies to:**
 - [Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP)](https://go.microsoft.com/fwlink/p/?linkid=2069559)
 
-[!include[Prerelease information](prerelease.md)]
 
 >Want to experience Microsoft Defender ATP? [Sign up for a free trial.](https://www.microsoft.com/en-us/WindowsForBusiness/windows-atp?ocid=docs-wdatp-automationexclusionlist-abovefoldlink)
 
@@ -107,9 +106,8 @@ When you add an indicator hash for a file, you can choose to raise an alert and 
 
 Files automatically blocked by an indicator won't show up in the files's Action center, but the alerts will still be visible in the Alerts queue.
 
-
 ## Create indicators for IPs and URLs/domains (preview)
-Microsoft Defender ATP can block what Microsoft deems as malicious IPs/URLs through SmartScreen for Microsoft browsers and Network Protection for non-Microsoft browsers and calls made outside the browser.
+Microsoft Defender ATP can block what Microsoft deems as malicious IPs/URLs, through Windows Defender SmartScreen for Microsoft browsers, and through Network Protection for non-Microsoft browsers or calls made outside of a browser.
 
 The threat intelligence data set for this has been managed by Microsoft.
 
@@ -121,6 +119,10 @@ It's important to understand the following prerequisites prior to creating indic
 - The Antimalware client version must be 4.18.1906.x or later. 
 - Supported on machines on Windows 10, version 1709 or later. 
 - Ensure that **Custom network indicators** is enabled in **Microsoft Defender Security Center > Settings > Advanced features**. For more information, see [Advanced features](advanced-features.md).
+
+
+>[!IMPORTANT]
+> Only external IPs can be added to the indicator list. Indicators cannot be created for internal IPs.
  
 >[!NOTE]
 >There may be up to 2 hours latency (usually less) between the time the action is taken, and the URL and IP being blocked. 
